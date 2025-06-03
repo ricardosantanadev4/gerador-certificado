@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { BaseUiComponent } from './_components/base-ui/base-ui.component';
 import { ItemCertificadoComponent } from './_components/item-certificado/item-certificado.component';
 import { NavbarComponent } from './_components/navbar/navbar.component';
 import { PrimaryButtonComponent } from './_components/primary-button/primary-button.component';
@@ -8,7 +9,8 @@ import { SecondaryButtonComponent } from './_components/secondary-button/seconda
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, CommonModule, PrimaryButtonComponent, SecondaryButtonComponent, ItemCertificadoComponent],
+  imports: [RouterOutlet, NavbarComponent, CommonModule, PrimaryButtonComponent, SecondaryButtonComponent, ItemCertificadoComponent,
+    BaseUiComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
