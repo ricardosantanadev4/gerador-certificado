@@ -70,9 +70,28 @@ label {
 
 .custom-input:focus {
   border: 1px solid #3B5AC2;
-  box-shadow: none; /* Remove a sombra criada pela classe do bootstrap form-control:focus*/
+  box-shadow: none;
+  /* Remove a sombra criada pela classe do bootstrap form-control:focus*/
 }
 
 .custom-input-group:has(input:focus) label {
   color: #3B5AC2;
+}
+
+.error-message {
+  gap: 4px;
+  color: #d71d1d;
+  margin-top: 8px;
+}
+
+.error-message p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+.custom-input-group:has(.error-message) label {
+  color: #d71d1d;
 }
