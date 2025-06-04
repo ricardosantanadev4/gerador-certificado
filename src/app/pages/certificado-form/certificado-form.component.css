@@ -67,3 +67,12 @@ label {
   padding: 8px 12px;
   height: 40px;
 }
+
+.custom-input:focus {
+  border: 1px solid #3B5AC2;
+  box-shadow: none; /* Remove a sombra criada pela classe do bootstrap form-control:focus*/
+}
+
+.custom-input-group:has(input:focus) label {
+  color: #3B5AC2;
+}
