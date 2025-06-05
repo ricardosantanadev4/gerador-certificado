@@ -9,5 +9,7 @@ import { SecondaryButtonComponent } from '../../_components/secondary-button/sec
   styleUrl: './certificado-form.component.css'
 })
 export class CertificadoFormComponent {
-
+  nome: string = '';
+  atividade: string = '';
+  atividades: string[] = ['React', 'Angular', 'Vue'];
 }
