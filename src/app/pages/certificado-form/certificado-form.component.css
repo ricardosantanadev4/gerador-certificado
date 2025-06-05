@@ -74,6 +74,10 @@ label {
   /* Remove a sombra criada pela classe do bootstrap form-control:focus*/
 }
 
+.custom-input-group {
+  margin-bottom: 20px;
+}
+
 .custom-input-group:has(input:focus) label {
   color: #3B5AC2;
 }
