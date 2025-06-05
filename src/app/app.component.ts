@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { BaseUiComponent } from './_components/base-ui/base-ui.component';
 import { NavbarComponent } from './_components/navbar/navbar.component';
-import { CertificadoFormComponent } from './pages/certificado-form/certificado-form.component';
+import { SecondaryButtonComponent } from './_components/secondary-button/secondary-button.component';
+import { CertificadoComponent } from './pages/certificado/certificado.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, CommonModule, BaseUiComponent, CertificadoFormComponent],
+  imports: [RouterOutlet, NavbarComponent, CommonModule, BaseUiComponent, CertificadoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
