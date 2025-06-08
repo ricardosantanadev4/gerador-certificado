@@ -5,6 +5,7 @@
       Preencha os dados para gerar um novo certificado
     </p>
   </div>
+
   <div class="custom-card w-100">
     <h2 class="card-title">Novo certificado</h2>
     <div class="custom-input-group">
@@ -18,22 +19,17 @@
       </div>
       }
     </div>
+
     <div class="mb-3 d-flex align-items-end">
       <div class="flex-grow-1 me-2">
-        <label [ngClass]="{'text-danger-label': campoValido(atividadeRef)}" for="atividade"
-          class="form-label">Atividade</label>
+        <label for="atividade" class="form-label">Atividade</label>
         <input #atividadeRef="ngModel" name="atividade" maxlength="50" required [(ngModel)]="atividade" id="atividade"
           type="text" class="form-control custom-input" placeholder="Atividade exercida" />
-        @if (campoValido(atividadeRef)) {
-        <div class="error-message d-flex align-items-center">
-          <i class="ph ph-warning-circle"></i>
-          <p class="m-0">A nome da atividade é obrigatório</p>
-        </div>
-        }
       </div>
-      <app-secondary-button
-        [ngStyle]="campoValido(atividadeRef) ? {'margin-bottom': '24px'} : {}"></app-secondary-button>
+      <app-secondary-button [phClass]="'ph ph-plus'" [textoBotao]="'Adicionar'"
+        [disabled]="atividade.length === 0"></app-secondary-button>
     </div>
+
     <div class="atividade-group">
       <label class="form-label">Lista de atividades</label>
       <div class="item-list w-100">
@@ -50,6 +46,6 @@
         }
       </div>
     </div>
-    <app-primary-button></app-primary-button>
+    <app-primary-button [textoBotao]="'Gerar Certificado'" [disabled]="!formValido()"></app-primary-button>
   </div>
 </form>
