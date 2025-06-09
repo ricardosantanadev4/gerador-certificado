@@ -37,6 +37,9 @@ export class CertificadoFormComponent {
   }
 
   adicionarAtividade() {
+    if (this.atividade.length === 0) {
+      return;
+    }
     this.certificado.atividades.push(this.atividade);
     this.atividade = '';
   }
