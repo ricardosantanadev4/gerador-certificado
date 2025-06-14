@@ -22,11 +22,7 @@ export class CertificadoComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.id = params.get('id');
-
       this.certificado = this.certificadoService.certificados.find(item => item.id === this.id);
-      console.log(this.certificado);
     })
-
-    console.log(this.certificadoService.certificados);
   }
 }

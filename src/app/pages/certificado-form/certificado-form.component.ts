@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, ViewChild } from '@angular/core';
 import { FormsModule, NgForm, NgModel } from '@angular/forms';
+import { Router } from '@angular/router';
 import { v4 as uuidV4 } from 'uuid';
 import { PrimaryButtonComponent } from '../../_components/primary-button/primary-button.component';
 import { SecondaryButtonComponent } from '../../_components/secondary-button/secondary-button.component';
@@ -26,7 +27,7 @@ export class CertificadoFormComponent {
     dataEmissao: '',
   };
 
-  constructor(private certificadoService: CertificadoService) { }
+  constructor(private certificadoService: CertificadoService, private router: Router) { }
 
   campoValido(control: NgModel) {
     return control.invalid && control.touched;
@@ -63,8 +64,9 @@ export class CertificadoFormComponent {
     }
 
     this.certificadoService.adicionarCertificado(copiaCertificado);
-    this.certificado = this.estadoInciaCertificado();
-    this.form.resetForm();
+    // this.certificado = this.estadoInciaCertificado();
+    // this.form.resetForm();
+    this.router.navigate(['certificados', copiaCertificado.id])
   }
 
   dataAtual() {
